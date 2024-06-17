@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/goit-advancedjs-hw-04/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced JS Homework 04</title>
+    
+    <script type="module" crossorigin src="/goit-advancedjs-hw-04/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-d372bf38.js">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-04/assets/vendor-e3983c10.css">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-04/assets/index-bcb1a7cf.css">
+  </head>
+  <body>
+    <header
+      class="py-4 bg-primary border-bottom position-sticky top-0 z-1 bg-body shadow-sm"
+    >
+      <div
+        class="container-fluid d-grid gap-3 align-items-center"
+        style="grid-template-columns: 1fr minmax(300px, 2fr) 1fr"
+      >
+        <form class="d-flex w-100" role="search" name="searchForm">
+          <div class="input-group position-relative">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search images..."
+              aria-label="Search"
+              name="searchInput"
+              aria-describedby="search-button"
+              required
+              minlength="2"
+              id="searchInput"
+            />
+            <span class="invalid-feedback error-msg">
+              Please provide a valid search (min 2 char)
+            </span>
+            <button
+              class="btn btn-primary d-inline-flex align-items-center"
+              style="min-width: 3rem"
+              type="submit"
+              id="search-button"
+              aria-label="Search button"
+            >
+              <svg class="" width="20" height="20">
+                <use href="/goit-advancedjs-hw-04/sprite.svg#search-glass"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div
+          class="toast-container py-2 top-100 end-0"
+          id="toastContainer"
+        ></div>
+      </div>
+    </header>
+
+    <main class="container position-relative">
+      <div class="grid py-4" data-gallery></div>
+      <button
+        class="btn btn-primary d-none d-block mx-auto"
+        data-load-more
+        type="button"
+      >
+        Load more
+      </button>
+    </main>
+
+    
+  </body>
+</html>
